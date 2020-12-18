@@ -4,7 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 from marshmallow import fields
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://<mysql_username>:<mysql_password>@<mysql_host>:<mysql_port>/<mysql_db>'
+#app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://<mysql_username>:<mysql_password>@<mysql_host>:<mysql_port>/<mysql_db>'
+#dialect+driver://username:password@host:port/database
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:senhaFiap@mysql/fiapdb'
 db = SQLAlchemy(app)
 
 ###Models####
