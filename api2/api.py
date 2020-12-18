@@ -44,6 +44,10 @@ db.create_all()
 #    productDescription = fields.String(required=True)
 #    productBrand = fields.String(required=True)
 #    price = fields.Number(required=True)
+
+@app.route("/teste")
+def Teste():
+    return "Porra o teste funcionou!\n"
  
 @app.route('/products', methods = ['GET'])
 def index():
