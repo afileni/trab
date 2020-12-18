@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
-from marshmallow_sqlalchemy import ModelSchema
+#from marshmallow_sqlalchemy import ModelSchema
 from marshmallow import fields
 
 app = Flask(__name__)
@@ -35,15 +35,15 @@ class Product(db.Model):
         return '' % self.id
 db.create_all()
 
-class ProductSchema(ModelSchema):
-    class Meta(ModelSchema.Meta):
-        model = Product
-        sqla_session = db.session
-    id = fields.Number(dump_only=True)
-    title = fields.String(required=True)
-    productDescription = fields.String(required=True)
-    productBrand = fields.String(required=True)
-    price = fields.Number(required=True)
+#class ProductSchema(ModelSchema):
+#    class Meta(ModelSchema.Meta):
+#        model = Product
+#        sqla_session = db.session
+#    id = fields.Number(dump_only=True)
+#    title = fields.String(required=True)
+#    productDescription = fields.String(required=True)
+#    productBrand = fields.String(required=True)
+#    price = fields.Number(required=True)
  
 @app.route('/products', methods = ['GET'])
 def index():
