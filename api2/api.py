@@ -6,7 +6,11 @@ from marshmallow import fields
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://<mysql_username>:<mysql_password>@<mysql_host>:<mysql_port>/<mysql_db>'
 #dialect+driver://username:password@host:port/database
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:senhaFiap@127.0.0.1:3306/fiap'
+#app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:senhaFiap@127.0.0.1:3306/fiap'
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'senhaFiap'
+app.config['MYSQL_DATABASE_DB'] = 'fiap'
+app.config['MYSQL_DATABASE_HOST'] = '127.0.0.1:3306'
 db = SQLAlchemy(app)
 
 ###Models####
