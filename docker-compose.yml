@@ -2,7 +2,7 @@ version: '2'
 services:
 
   api:
-    build: api/.
+    build: api2/.
     ports:
       - "4000:5000"
     links:
