@@ -17,6 +17,9 @@ FROM tiangolo/uwsgi-nginx:python3.8
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 RUN pip install flask
+RUN pip install flask-mysql
+RUN pip install flask-cors
+RUN pip install cryptography
 
 # URL under which static (not modified by Python) files will be requested
 # They will be served by Nginx directly, without being handled by uWSGI
@@ -29,7 +32,8 @@ ENV STATIC_PATH /app/static
 ENV STATIC_INDEX 0
 
 # Add demo app
-COPY ./app /app
+#COPY ./app /app
+COPY api.py /app
 WORKDIR /app
 
 # Make /app/* available to be imported by Python globally to better support several use cases like Alembic migrations.
