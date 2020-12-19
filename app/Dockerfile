@@ -32,8 +32,8 @@ ENV STATIC_PATH /app/static
 ENV STATIC_INDEX 0
 
 # Add demo app
-#COPY ./app /app
-COPY api.py /app
+COPY ./site /app
+COPY main.py /app
 WORKDIR /app
 
 # Make /app/* available to be imported by Python globally to better support several use cases like Alembic migrations.
