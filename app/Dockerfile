@@ -12,7 +12,7 @@
 
 #CMD [ "./api.py" ]
 
-FROM tiangolo/uwsgi-nginx:python3.8
+FROM tiangolo/uwsgi-nginx:python3.6
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
