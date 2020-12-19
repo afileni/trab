@@ -9,7 +9,7 @@ services:
 #        - "6379:6379"
 
   trab-front:
-    build: ./site
+    build: ./front
 #    image: mcr.microsoft.com/azuredocs/azure-vote-front:v1
     container_name: trab-front
 #    environment:
